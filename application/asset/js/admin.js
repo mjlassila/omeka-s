@@ -1,4 +1,5 @@
 var Omeka = {
+
     openSidebar : function(sidebar) {
         sidebar.addClass('active');
         this.reserveSidebarSpace();
@@ -200,6 +201,15 @@ var Omeka = {
 (function($, window, document) {
 
     $(function() {
+
+        $("#skip-nav").click(function() {
+            $("#content").attr("tabindex", -1).focus();
+        });
+
+        $("#content").on("blur focusout", function () {
+            $(this).removeAttr("tabindex");
+        });
+
         Omeka.reserveSidebarSpace();
 
         if (window.location.hash && $('.section').filter(window.location.hash).length) {

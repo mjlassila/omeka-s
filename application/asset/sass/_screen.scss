@@ -665,6 +665,22 @@ a.collapse {
 
 /* @group ----- Header ----- */
 
+#skip-nav {
+    position: absolute;
+    top: $spacing-small;
+    left: -9999px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 1000;
+    border: 1px solid $border-gray;
+    padding: $spacing-small $spacing-medium;
+    border-radius: 3px;
+
+    &:focus {
+        left: 50%;
+    }
+}
+
 header {
     background-color: $blue;
     width: span(3 of 16);

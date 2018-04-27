@@ -34,6 +34,7 @@ $this->trigger('view.layout');
     </head>
     <?php echo $this->htmlElement('body'); ?>
         <div class="flex">
+            <a href="#content" id="skip-nav"><?php echo $this->translate('Skip to content'); ?></a>
             <header>
                 <div class="logo"><a href="<?php echo $this->url('admin'); ?>"><?php echo $this->setting('installation_title', 'Omeka S'); ?></a></div>
                 <div id="mobile-nav">
